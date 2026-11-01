@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="606" viewBox="0 0 680 606" role="img" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>One ticket through v3</title>
+  <desc>An escalated ticket goes through a code pre-check. Empty or non-escalated tickets get insufficient_input with no model call. Others go through buildContext, render from the v3 prompt files and a ChatAnthropic structured-output call, and end as a raw JSON generation for the scorer.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="606" rx="12" fill="#FFFFFF"/>
+
+  <g stroke="#5F5E5A" stroke-width="1.2" fill="none" marker-end="url(#arrow)">
+    <line x1="400" y1="86" x2="400" y2="124"/>
+    <path d="M280 154 L135 154 L135 220"/>
+    <line x1="400" y1="182" x2="400" y2="220"/>
+    <line x1="400" y1="278" x2="400" y2="316"/>
+    <line x1="400" y1="374" x2="400" y2="412"/>
+    <line x1="400" y1="470" x2="400" y2="508"/>
+    <path d="M135 278 L135 538 L278 538"/>
+  </g>
+  <g font-size="12" fill="#5F5E5A">
+    <text x="196" y="146" text-anchor="middle">yes</text>
+    <text x="412" y="205">no</text>
+  </g>
+
+  <g text-anchor="middle" dominant-baseline="central">
+    <rect x="280" y="30" width="240" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/>
+    <text x="400" y="48" font-size="14" font-weight="600" fill="#2C2C2A">Escalated ticket</text>
+    <text x="400" y="68" font-size="12" fill="#5F5E5A">Thread, order, Reply Assist</text>
+
+    <rect x="280" y="126" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+    <text x="400" y="144" font-size="14" font-weight="600" fill="#3C3489">Pre-check in code</text>
+    <text x="400" y="164" font-size="12" fill="#534AB7">Empty or not escalated?</text>
+
+    <rect x="40" y="222" width="190" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+    <text x="135" y="240" font-size="14" font-weight="600" fill="#3C3489">insufficient_input</text>
+    <text x="135" y="260" font-size="12" fill="#534AB7">No model call, $0</text>
+
+    <rect x="280" y="222" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+    <text x="400" y="240" font-size="14" font-weight="600" fill="#3C3489">buildContext()</text>
+    <text x="400" y="260" font-size="12" fill="#534AB7">Select, order, count</text>
+
+    <rect x="280" y="318" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+    <text x="400" y="336" font-size="14" font-weight="600" fill="#3C3489">render() from files</text>
+    <text x="400" y="356" font-size="12" fill="#534AB7">v3.system + v3.user</text>
+
+    <rect x="280" y="414" width="240" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+    <text x="400" y="432" font-size="14" font-weight="600" fill="#712B13">ChatAnthropic</text>
+    <text x="400" y="452" font-size="12" fill="#993C1D">Structured output, Zod</text>
+
+    <rect x="280" y="510" width="240" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.8"/>
+    <text x="400" y="528" font-size="14" font-weight="600" fill="#2C2C2A">Generation</text>
+    <text x="400" y="548" font-size="12" fill="#5F5E5A">Raw JSON to scorer</text>
+  </g>
+
+  <g font-size="12" fill="#444441">
+    <rect x="560" y="40" width="14" height="14" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+    <text x="580" y="51">Code</text>
+    <rect x="560" y="64" width="14" height="14" rx="3" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+    <text x="580" y="75">Model call</text>
+  </g>
+</svg>
